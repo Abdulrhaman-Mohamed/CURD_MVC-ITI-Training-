@@ -1,0 +1,47 @@
+﻿@model Employee
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/TheFirst.cshtml";
+}
+
+<form method="post" action="/pro/Edit">
+
+    <div class="row mb-3">
+
+        <div class="col-sm-10">
+            <input type="hidden" disabled class="form-control" id="ID" name="ID" value="@Model.ID">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="name_" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name_" name="name_" value="@Model.name_">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="age" class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="age" name="age" value="@Model.age">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="salary" class="col-sm-2 col-form-label">Salary</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="salary" name="salary" value="@Model.salary">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="Dept_ID" class="col-sm-2 col-form-label">Department</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="Dept_ID" name="Dept_ID" />
+        </div>
+    </div>
+
+
+    <input type="submit" value="Edit" class="btn btn-primary" />
+</form>
+<br />
+<br />
+<a href="/pro/Thepage" class="btn btn-outline-secondary"> Back To Home</a>
+
